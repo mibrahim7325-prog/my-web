@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SugaerBloom Bakery — homemade cakes, brownies and desserts delivered across Karachi.">
+  <title>SugaerBloom Bakery | Homemade Cakes & Desserts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --cream:#fff9f3; --paper:#fffdf9; --brown:#3f2117; --brown-2:#6b3928;
+  --rose:#d77d78; --rose-light:#f8d9d4; --gold:#b9823a; --line:#ead9cc;
+  --shadow:0 20px 55px rgba(75,42,28,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:"DM Sans",sans-serif;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1140px,calc(100% - 40px));margin:auto}
+.ticker{overflow:hidden;background:var(--brown);color:#fff8f1;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.ticker-track{width:max-content;display:flex;gap:28px;padding:9px 0;animation:marquee 28s linear infinite}
+.ticker b{color:#e9ad9f}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,249,243,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(107,57,40,.08)}
+.nav{height:78px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.brand img{width:52px;height:52px;object-fit:cover;border-radius:50%}
+.brand strong{font-family:"Playfair Display",serif;font-size:22px;display:block;line-height:1}
+.brand small{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#987464}
+nav{display:flex;gap:25px;font-size:13px;font-weight:600}
+nav a:hover,.instagram:hover,.order-link:hover{color:var(--rose)}
+.nav-order,.btn{border-radius:999px;padding:11px 18px;font-weight:700;font-size:13px;transition:.2s}
+.nav-order{background:var(--brown);color:#fff}
+.nav-order:hover{transform:translateY(-2px);background:#5b3021}
+.menu-toggle{display:none;border:0;background:none;font-size:24px;color:var(--brown)}
+.hero{position:relative;overflow:hidden;padding:78px 0 90px;background:radial-gradient(circle at 82% 35%,#f6ddd2 0,transparent 31%),linear-gradient(135deg,#fffaf4,#f8eee6)}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px}
+.eyebrow{margin:0 0 12px;font-size:11px;letter-spacing:.2em;font-weight:800;color:var(--rose)}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.08;margin:0}
+h1{font-size:clamp(52px,7vw,88px);letter-spacing:-.04em}
+h1 em,h2 em{color:var(--rose);font-weight:500}
+.hero-text{max-width:560px;font-size:17px;color:#72584c;margin:24px 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center}
+.btn-primary{background:var(--brown);color:white;box-shadow:0 10px 25px rgba(63,33,23,.16)}
+.btn-primary:hover{transform:translateY(-2px);background:#5c2f21}
+.btn-light{background:white;border:1px solid var(--line)}
+.btn-light:hover{background:#fff4ed}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;font-size:11px;color:#80675a}
+.hero-card{position:relative;max-width:520px;margin:auto}
+.hero-card img{width:100%;height:530px;object-fit:cover;border-radius:240px 240px 24px 24px;box-shadow:var(--shadow)}
+.hero-card-label{position:absolute;left:24px;bottom:24px;background:rgba(255,253,249,.93);padding:16px 20px;border-radius:14px;box-shadow:0 12px 30px rgba(50,25,16,.12)}
+.hero-card-label span,.hero-card-label small{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#927366}
+.hero-card-label strong{font-family:"Playfair Display",serif;font-size:22px;display:block}
+.floating-badge{position:absolute;right:-12px;top:38px;width:94px;height:94px;border-radius:50%;background:var(--rose);color:white;display:grid;place-content:center;text-align:center;font-size:10px;line-height:1.05;transform:rotate(10deg);box-shadow:0 12px 25px rgba(215,125,120,.3)}
+.floating-badge strong{font-size:16px}
+.intro{padding:65px 0;border-bottom:1px solid var(--line);background:#fffdf9}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.intro h2,.section-heading h2,.brownie-copy h2,.cta h2{font-size:clamp(34px,4.2vw,54px)}
+.intro-grid>p{margin:0;color:#765e52;font-size:16px}
+.section{padding:90px 0}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+.section-heading>p{max-width:350px;margin:0;color:#80675a}
+.centered{text-align:center;display:block}.centered .eyebrow{margin-bottom:10px}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 25px rgba(80,45,30,.05);transition:.25s}
+.product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.image-wrap{position:relative;height:330px;overflow:hidden;background:#eee}
+.image-wrap img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.product-card:hover .image-wrap img{transform:scale(1.04)}
+.tag{position:absolute;left:14px;top:14px;background:white;padding:7px 10px;border-radius:999px;font-size:9px;letter-spacing:.13em;font-weight:800}
+.product-body{padding:24px}
+.product-kicker{font-size:10px;letter-spacing:.18em;color:var(--rose);font-weight:800;margin:0 0 7px}
+.product-body h3{font-size:29px;margin-bottom:10px}
+.product-body>p{font-size:13px;color:#795f52;min-height:84px;margin:0 0 18px}
+.price-row{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:11px 0;font-size:13px}
+.price-row strong{color:var(--brown)}
+.order-link{display:inline-block;margin-top:8px;color:var(--brown);font-weight:800;font-size:12px}
+.brownie-section{background:#3c2118;color:#fff8f1}
+.brownie-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:75px;align-items:center}
+.brownie-photo{position:relative}
+.brownie-photo img{width:100%;height:500px;object-fit:cover;border-radius:24px}
+.photo-note{position:absolute;right:18px;bottom:18px;background:rgba(255,255,255,.92);color:var(--brown);border-radius:999px;padding:8px 13px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.brownie-copy .eyebrow{color:#e8aaa0}
+.brownie-copy h2{margin-bottom:20px}
+.brownie-copy>p{color:#dfc8ba;max-width:500px}
+.brownie-prices{margin:26px 0 28px;border-top:1px solid rgba(255,255,255,.16)}
+.brownie-prices div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.brownie-prices strong{font-size:18px}
+.values{background:#fffdf9}
+.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+.value{padding:26px 20px;border-top:2px solid var(--rose);background:#fffaf5}
+.value span{font-size:11px;color:var(--rose);font-weight:800}
+.value h3{font-size:23px;margin:12px 0 8px}
+.value p{font-size:12px;color:#7d6458;margin:0}
+.cta{padding:80px 0;background:linear-gradient(135deg,#f5dcd4,#fff5ed)}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.cta-actions{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.instagram{font-weight:700;font-size:13px}
+footer{background:#2c1812;color:#f7e9df;padding:55px 0 20px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;padding-bottom:40px}
+.footer-brand{display:flex;gap:15px;align-items:center}
+.footer-brand img{width:64px;height:64px;object-fit:cover;border-radius:50%}
+.footer-brand strong{font-family:"Playfair Display",serif;font-size:24px}
+.footer-brand p{margin:4px 0 0;color:#c9aaa0;font-size:12px}
+footer h4{margin:0 0 13px;font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#d99a91}
+footer a{display:block;color:#dfc6ba;font-size:13px;margin:8px 0}
+.copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;color:#a98d82;font-size:11px}
+@media(max-width:900px){
+  .nav{height:70px}.nav-order{display:none}.menu-toggle{display:block}
+  nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff9f3;padding:18px 20px;flex-direction:column;border-bottom:1px solid var(--line)}
+  nav.open{display:flex}
+  .hero{padding:55px 0 65px}.hero-grid,.intro-grid,.brownie-grid{grid-template-columns:1fr;gap:40px}
+  .hero-card{max-width:600px}.hero-card img{height:500px}
+  .product-grid{grid-template-columns:1fr 1fr}.value-grid{grid-template-columns:1fr 1fr}
+  .section-heading{align-items:start;flex-direction:column}
+  .cta-inner{flex-direction:column;align-items:flex-start}.cta-actions{align-items:flex-start}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 28px,1140px)}
+  .brand small{display:none}.brand strong{font-size:19px}
+  h1{font-size:48px}.hero-text{font-size:15px}
+  .hero-card img{height:410px}.floating-badge{right:-3px}
+  .product-grid,.value-grid,.footer-grid{grid-template-columns:1fr}
+  .section{padding:65px 0}.image-wrap{height:330px}
+  .brownie-photo img{height:360px}
+  .intro{padding:50px 0}
+  .hero-trust{gap:10px;flex-direction:column}
+}
+
+</style>
+</head>
+<body>
+  <!-- Moving announcement bar -->
+  <div class="ticker" aria-label="Bakery announcements">
+    <div class="ticker-track">
+      <span>Freshly Baked Every Day</span><b>✦</b>
+      <span>Homemade With Premium Ingredients</span><b>✦</b>
+      <span>Karachi Delivery Available</span><b>✦</b>
+      <span>Custom Cake Orders Welcome</span><b>✦</b>
+      <span>Freshly Baked Every Day</span><b>✦</b>
+      <span>Homemade With Premium Ingredients</span><b>✦</b>
+      <span>Karachi Delivery Available</span><b>✦</b>
+      <span>Custom Cake Orders Welcome</span><b>✦</b>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="SugaerBloom home">
+        <img src="assets/logo.jpeg" alt="SugaerBloom Bakery logo">
+        <div>
+          <strong>SugaerBloom</strong>
+          <small>Bakery & Desserts</small>
+        </div>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#brownies">Brownies</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-order" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order Now</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">HOME BAKED • KARACHI DELIVERY</p>
+          <h1>Sweet moments,<br><em>beautifully baked.</em></h1>
+          <p class="hero-text">Handcrafted cakes, brownies and desserts made at home with carefully selected ingredients — fresh, delicious and made specially for you.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cakes">Explore Our Cakes <span>→</span></a>
+            <a class="btn btn-light" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%20Bakery%2C%20I%20want%20to%20order." target="_blank" rel="noopener">WhatsApp Us</a>
+          </div>
+          <div class="hero-trust">
+            <span>✓ Homemade</span>
+            <span>✓ Premium products</span>
+            <span>✓ Made to order</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img src="sneaker.jpeg" alt="SugaerBloom signature sneaker cake">
+            <div class="hero-card-label">
+              <span>Signature Collection</span>
+              <strong>Sneaker Cake</strong>
+              <small>Our premium showstopper</small>
+            </div>
+          </div>
+          <div class="floating-badge">Fresh<br><strong>&amp;</strong><br>Special</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">WHY SUGAERBLOOM?</p>
+          <h2>Made with care.<br>Served with love.</h2>
+        </div>
+        <p>From a simple chocolate craving to a celebration cake, every SugaerBloom order is prepared with attention to flavour, freshness and presentation. We keep things homemade, personal and special.</p>
+      </div>
+    </section>
+
+    <section class="products section" id="cakes">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OUR MENU</p>
+            <h2>Cakes made for every craving</h2>
+          </div>
+          <p>Choose your favourite, then message us to order.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card featured">
+            <div class="image-wrap">
+              <img src="sneaker.jpeg" alt="Chocolate sneaker cake">
+              <span class="tag">PREMIUM</span>
+            </div>
+            <div class="product-body">
+              <p class="product-kicker">SIGNATURE CAKE</p>
+              <h3>Sneaker Cake</h3>
+              <p>A rich, dramatic chocolate cake made to stand out. This is our premium showstopper — perfect for birthdays and big celebrations.</p>
+              <div class="price-row"><span>1 Pound</span><strong>Rs. 1,800</strong></div>
+              <div class="price-row"><span>2 Pounds</span><strong>Rs. 3,000</strong></div>
+              <a class="order-link" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%2C%20I%20want%20to%20order%20the%20Sneaker%20Cake." target="_blank" rel="noopener">Order this cake →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="image-wrap">
+              <img src="malt.jpeg" alt="Chocolate malt cake">
+              <span class="tag">CHOCOLATE LOVERS</span>
+            </div>
+            <div class="product-body">
+              <p class="product-kicker">RICH & CREAMY</p>
+              <h3>Malt Cake</h3>
+              <p>Soft, chocolatey and deeply satisfying, with a creamy malt flavour. A favourite for anyone who truly loves chocolate.</p>
+              <div class="price-row"><span>1 Pound</span><strong>Rs. 1,200</strong></div>
+              <div class="price-row"><span>2 Pounds</span><strong>Rs. 2,000</strong></div>
+              <a class="order-link" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%2C%20I%20want%20to%20order%20the%20Malt%20Cake." target="_blank" rel="noopener">Order this cake →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="image-wrap">
+              <img src="pinepple.jpeg" alt="Pineapple chocolate cake">
+              <span class="tag">BESTSELLER</span>
+            </div>
+            <div class="product-body">
+              <p class="product-kicker">FRUITY & CHOCOLATEY</p>
+              <h3>Pineapple Chocolate Cake</h3>
+              <p>A delicious balance of chocolate richness and bright pineapple sweetness, finished with creamy swirls and chocolate shavings.</p>
+              <div class="price-row"><span>1 Pound</span><strong>Rs. 1,000</strong></div>
+              <div class="price-row"><span>2 Pounds</span><strong>Rs. 1,800</strong></div>
+              <a class="order-link" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%2C%20I%20want%20to%20order%20the%20Pineapple%20Chocolate%20Cake." target="_blank" rel="noopener">Order this cake →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="brownie-section section" id="brownies">
+      <div class="container brownie-grid">
+        <div class="brownie-photo">
+          <img src="brownie.jpeg" alt="Fresh chocolate brownies">
+          <span class="photo-note">Fresh from our kitchen</span>
+        </div>
+        <div class="brownie-copy">
+          <p class="eyebrow">BROWNIE BOX</p>
+          <h2>Chocolate brownies,<br><em>fudgy & irresistible.</em></h2>
+          <p>Our homemade brownies are rich, chocolatey and baked for that soft, fudgy centre. Great for gifting, sharing or keeping all to yourself.</p>
+          <div class="brownie-prices">
+            <div><span>6 Pieces</span><strong>Rs. 600</strong></div>
+            <div><span>16 Pieces</span><strong>Rs. 1,200</strong></div>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%2C%20I%20want%20to%20order%20Brownies." target="_blank" rel="noopener">Order Brownies</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="values section" id="about">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">THE SUGAERBLOOM PROMISE</p>
+          <h2>Small bakery. Big sweet moments.</h2>
+        </div>
+        <div class="value-grid">
+          <div class="value"><span>01</span><h3>Homemade</h3><p>Prepared with the care and attention you expect from a home bakery.</p></div>
+          <div class="value"><span>02</span><h3>Quality First</h3><p>We use good-quality ingredients and focus on flavour in every batch.</p></div>
+          <div class="value"><span>03</span><h3>Made Fresh</h3><p>Your order is prepared fresh so every bite feels special.</p></div>
+          <div class="value"><span>04</span><h3>Karachi Delivery</h3><p>Order from the comfort of home and ask us about delivery to your area.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">READY TO ORDER?</p>
+          <h2>Let's make your next<br><em>celebration sweeter.</em></h2>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/923232985282?text=Hi%20SugaerBloom%20Bakery%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">WhatsApp: 0323 2985282</a>
+          <a class="instagram" href="https://www.instagram.com/sugaebloom_bakery/" target="_blank" rel="noopener">@sugaebloom_bakery ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.jpeg" alt="SugaerBloom Bakery logo">
+        <div><strong>SugaerBloom</strong><p>Homemade cakes & desserts in Karachi.</p></div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#cakes">Cakes</a>
+        <a href="#brownies">Brownies</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div>
+        <h4>Order</h4>
+        <a href="tel:+923232985282">0323 2985282</a>
+        <a href="https://wa.me/923232985282" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/sugaebloom_bakery/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> SugaerBloom Bakery. Made with love in Karachi.</div>
+  </footer>
+
+  <script>
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("#main-nav");
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+
+document.querySelectorAll("#main-nav a").forEach(link => {
+  link.addEventListener("click", () => nav.classList.remove("open"));
+});
+
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
